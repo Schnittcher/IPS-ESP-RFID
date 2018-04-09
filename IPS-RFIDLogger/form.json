@@ -1,0 +1,49 @@
+{
+    "elements":
+    [
+      { "type": "Label",
+        "label": "List of all transponders that have access",
+      },
+      {
+        "type": "List",
+        "name": "Transponder",
+        "rowCount": 15,
+        "add": true,
+        "delete": true,
+        "sort": {
+          "column": "TransponderID",
+          "direction": "ascending"
+        },
+        "columns": [{
+          "label": "Transponder ID",
+          "name": "TransponderID",
+          "add": 1,
+          "edit": {
+            "type": "ValidationTextBox"
+          },
+          "width": "90px"
+        }, {
+          "label": "Transponder Name",
+          "name": "TransponderName",
+          "add": "",
+          "edit": {
+            "type": "ValidationTextBox"
+          },
+          "width": "auto"
+        }
+        ],
+        "values": []
+      }
+    ],
+  "actions":
+  [
+    { "type": "Label",
+      "label": "IMPORTANT: You must close this page an reopen it to see the changes."
+    },
+    {
+    "type": "Button",
+    "label": "Add Last Transponder",
+    "onClick": "ESPRFID_AddLastTransponder($id);"
+  }
+  ]
+}

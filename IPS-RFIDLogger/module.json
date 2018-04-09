@@ -1,0 +1,11 @@
+{
+	"id": "{D0055C39-D00F-4F4D-828F-615A620B611F}",
+	"name": "IPS_RFIDLogger",
+	"type": 3,
+	"vendor": "",
+	"aliases": ["RFID Logger"],
+	"parentRequirements": ["{79827379-F36E-4ADA-8A95-5F8D1DC92FA9}"],
+	"childRequirements": ["{018EF6B5-AB94-40C6-AA53-46943E824ACF}"],
+	"implemented": ["{018EF6B5-AB94-40C6-AA53-46943E824ACF}"],
+	"prefix": "ESPRFID"
+}
