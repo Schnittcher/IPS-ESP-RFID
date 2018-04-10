@@ -36,7 +36,12 @@ class IPS_RFIDLogger extends IPSModule
         //Get all Transponder with access
         $TransponderList = $this->ReadPropertyString('Transponder');
         $TransponderList = json_decode($TransponderList);
-        $TransponderIDs = array_column($TransponderList, "TransponderID");
+
+        //$TransponderIDs = array_column($TransponderList, "TransponderID"); //function in PHP 5.6 not available
+        $TransponderIDs= array();
+        foreach ($TransponderList as $value) {
+            array_push($TransponderIDs, $value->TransponderID);
+        }
         //Check if the scanned transponder has access and send relay command
         if (in_array($Buffer->uid,$TransponderIDs)) {
             $this->SendDebug("Access for Transponder",$Buffer->uid,0);
@@ -70,7 +75,11 @@ class IPS_RFIDLogger extends IPSModule
         $LastScannedTransponder = GetValue($this->GetIDForIdent('ESPRFID_LastTransponder'));
         //Json List to array
         $TransponderList = json_decode($TransponderList);
-        $TransponderIDs = array_column($TransponderList, "TransponderID");
+        $TransponderIDs= array();
+        foreach ($TransponderList as $value) {
+            array_push($TransponderIDs, $value->TransponderID);
+        }
+        //$TransponderIDs = array_column($TransponderList, "TransponderID"); //function in PHP 5.6 not available
         if (!in_array($LastScannedTransponder,$TransponderIDs)) {
             //Add Last Transponder to an array for List
             $Transponder = array(
