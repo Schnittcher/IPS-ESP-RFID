@@ -1,4 +1,4 @@
-<a href="https://www.symcon.de"><img src="https://img.shields.io/badge/IP--Symcon-4.0-blue.svg?style=flat-square"/></a>
+<a href="https://www.symcon.de"><img src="https://img.shields.io/badge/IP--Symcon-4.3-blue.svg?style=flat-square"/></a>
 <a href="https://www.symcon.de"><img src="https://img.shields.io/badge/IP--Symcon-5.0-blue.svg?style=flat-square"/></a>
 <br />
 

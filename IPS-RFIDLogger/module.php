@@ -39,8 +39,11 @@ class IPS_RFIDLogger extends IPSModule
         $TransponderIDs = array_column($TransponderList, "TransponderID");
         //Check if the scanned transponder has access and send relay command
         if (in_array($Buffer->uid,$TransponderIDs)) {
-            $this->SendDebug("Access scanned Transponder",$Buffer->uid,0);
+            $this->SendDebug("Access for Transponder",$Buffer->uid,0);
             $this->setRelais();
+        } else {
+            $this->SendDebug("All Transponder in List", json_encode($TransponderIDs),0);
+            $this->SendDebug("No Access for Transponder",$Buffer->uid,0);
         }
     }
 
