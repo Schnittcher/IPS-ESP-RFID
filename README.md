@@ -22,9 +22,9 @@ Websocket Client:
 git://github.com/Nall-chan/IPSNetwork.git
 ```
 
-IPS-RFIDLogger:
+IPS-ESP-RFID:
 ```
-git://github.com/Nall-chan/IPSNetwork.git
+https://github.com/Schnittcher/IPS-ESP-RFID.git
 ```
 
 ## 3. Konfiguration in IP-Symcon
