@@ -24,7 +24,7 @@ git://github.com/Nall-chan/IPSNetwork.git
 
 IPS-ESP-RFID:
 ```
-https://github.com/Schnittcher/IPS-ESP-RFID.git
+git://github.com/Schnittcher/IPS-ESP-RFID.git
 ```
 
 ## 3. Konfiguration in IP-Symcon
